@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8f7f4">
+<meta name="description" content="The Murshidabad Review — a journal of global affairs, historical perspectives and independent analysis.">
+<title>The Murshidabad Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf9f6;--ink:#333;--muted:#73716b;--line:#d6d2ca}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif}a{color:inherit;text-decoration:none}a:hover{text-decoration:underline}button{cursor:pointer}
+.wrap{max-width:1250px;margin:auto;padding:0 30px}.micro,.nav,.kicker,.byline,.section-title,.footer,.tagline{font-family:Comfortaa,Arial,sans-serif}
+.top{border-bottom:1px solid var(--line);padding:15px 0;display:flex;justify-content:space-between;gap:10px;font:10px Comfortaa,sans-serif;color:var(--muted)}
+.masthead{text-align:center;padding:39px 0 31px}.logo{font:600 clamp(20px,4.15vw,51px)/1.2 Comfortaa,Arial,sans-serif;letter-spacing:-.08em;white-space:nowrap}
+.tagline{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin:16px 0 0}
+.nav{border-top:1px solid var(--ink);border-bottom:3px double var(--ink);display:flex;justify-content:center;flex-wrap:wrap;gap:5px 26px;padding:0 10px}
+.nav button{background:none;border:0;border-bottom:2px solid transparent;padding:17px 0 15px;color:var(--ink);font:500 10px Comfortaa,Arial,sans-serif}
+.nav button.active,.nav button:hover{border-bottom-color:var(--ink)}
+.preview{border:1px solid var(--line);padding:11px;text-align:center;font:10px/1.6 Comfortaa,sans-serif;color:var(--muted);margin:23px 0 0}
+.section-title{border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin:38px 0 24px;padding:15px 0;font-size:12px;letter-spacing:.05em}
+.first-label{font:10px Comfortaa,Arial,sans-serif;letter-spacing:.17em;text-transform:uppercase;margin:39px 0 17px;display:flex;align-items:center;gap:18px}.first-label:after{content:"";height:1px;background:var(--line);flex:1}
+.front{display:grid;grid-template-columns:1.85fr 1fr;gap:30px;padding-bottom:37px;border-bottom:1px solid var(--ink)}
+.feature{padding-right:30px;border-right:1px solid var(--line)}.kicker{color:var(--muted);text-transform:uppercase;letter-spacing:.14em;font-size:10px}
+h1,h2,h3{font-weight:400;letter-spacing:-.025em}h1{font-size:clamp(37px,4.5vw,65px);line-height:1.12;margin:14px 0 18px}h2{font-size:28px;line-height:1.24;margin:13px 0}h3{font-size:25px;line-height:1.27;margin:13px 0}
+p{color:#5e5c55;line-height:1.65}.feature p{font-size:18px;margin:0 0 16px}.byline{font-size:10px;color:var(--muted)}
+.visual{margin-top:26px;height:270px;background:#e8e5de;display:grid;place-items:center;overflow:hidden;position:relative;color:#68645e;text-align:center;font:italic 29px/1.4 Georgia,serif}
+.visual:before,.visual:after{content:"";border:1px solid #aca79b;width:82%;height:60%;position:absolute;transform:rotate(-5deg)}.visual:after{width:67%;height:75%;transform:rotate(6deg)}.visual span{z-index:1}
+.small-story{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:24px}.small-story:last-child{border-bottom:0;margin:0;padding:0}.small-story p,.tile p{font-size:15px;margin:0 0 12px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);padding:0 0 33px}.tile{padding:0 23px;border-right:1px solid var(--line)}.tile:first-child{padding-left:0}.tile:last-child{padding-right:0;border:0}
+.about-teaser{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;border-top:1px solid var(--ink);padding:35px 0 55px}.about-teaser h2{font-size:38px}.about-teaser p{margin:0 0 12px}
+.outline{border:1px solid var(--ink);background:none;color:var(--ink);padding:13px 16px;font:11px Comfortaa,sans-serif;margin-top:12px}.outline:hover{background:var(--ink);color:white}
+.section-page{padding:40px 0 60px}.section-page h1{font-size:clamp(40px,5vw,65px);margin:0 0 15px}.section-page>p{max-width:720px;font-size:18px}.section-items{border-top:2px solid var(--ink);padding:26px 0;display:grid;grid-template-columns:1fr 1fr;gap:30px}.section-items article{border-bottom:1px solid var(--line);padding-bottom:22px}
+.footer{border-top:3px double var(--ink);padding:27px 0 38px;display:flex;justify-content:space-between;gap:20px;align-items:center}.footer strong{font-size:17px;letter-spacing:-.07em}.footer span{font-size:10px;color:var(--muted);text-align:right;line-height:1.7}
+.hidden{display:none!important}:focus-visible{outline:2px solid #555;outline-offset:4px}
+@media(max-width:780px){.wrap{padding:0 19px}.front{grid-template-columns:1fr}.feature{border-right:0;border-bottom:1px solid var(--line);padding:0 0 28px}.tiles{grid-template-columns:1fr}.tile,.tile:first-child,.tile:last-child{padding:0 0 20px;margin-bottom:22px;border-right:0;border-bottom:1px solid var(--line)}.about-teaser{grid-template-columns:1fr;gap:5px}.nav{gap:0 18px}.section-items{grid-template-columns:1fr}}
+@media(max-width:470px){.wrap{padding:0 15px}.top span:last-child{display:none}.logo{font-size:clamp(14px,4.15vw,20px)}.tagline{font-size:8px;letter-spacing:.06em}.nav button{font-size:9px;padding:13px 0}.visual{height:195px}.footer{align-items:flex-start;flex-direction:column}.footer span{text-align:left}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="top"><span id="today">Independent journal</span><span>Global affairs · Historical perspectives · Independent analysis</span></div>
+<div class="masthead"><a class="logo" data-page="Home" href="#home">The Murshidabad Review</a><p class="tagline">Global affairs · Historical perspectives · Independent analysis</p></div>
+<nav class="nav" aria-label="Sections">
+<button data-page="Home" class="active">Home</button><button data-page="Global Affairs">Global Affairs</button><button data-page="History">History</button><button data-page="Economy">Economy</button><button data-page="Science & Technology">Science & Technology</button><button data-page="Culture">Culture</button><button data-page="Reviews">Reviews</button><button data-page="About">About</button>
+</nav>
+</header>
+<main>
+<p class="preview">Preview edition — all article headlines and summaries shown here are illustrative placeholders, not published reporting.</p>
+<div id="home">
+<div class="first-label">The Front Page</div>
+<div class="front">
+<article class="feature"><div class="kicker">Featured Essay · History & Global Affairs</div>
+<h1>How history shapes the world we inhabit</h1>
+<p>From the movement of goods and capital to the institutions of political power, understanding the present begins with a careful examination of the past.</p>
+<div class="byline">Editorial preview · Illustrative article</div>
+<div class="visual"><span>History, power<br>and perspective</span></div></article>
+<aside>
+<article class="small-story"><div class="kicker">Global Affairs</div><h2>Rethinking the international order</h2><p>An example of the long-form analysis and evidence-led commentary this journal will publish.</p><div class="byline">Editorial preview</div></article>
+<article class="small-story"><div class="kicker">Economy</div><h2>Trade, institutions and the global economy</h2><p>Exploring the historical foundations of modern economic relationships.</p><div class="byline">Editorial preview</div></article>
+<article class="small-story"><div class="kicker">Reviews</div><h2>A space for independent criticism</h2><p>Books, films and ideas examined by specialists with editorial independence.</p><div class="byline">Editorial preview</div></article>
+</aside>
+</div>
+<div class="section-title">Perspectives</div>
+<div class="tiles">
+<article class="tile"><div class="kicker">History</div><h3>Bengal and the wider history of exchange</h3><p>A historical lens on trade networks, intellectual exchange and shifting political centres.</p><div class="byline">Illustrative article</div></article>
+<article class="tile"><div class="kicker">Science & Technology</div><h3>Science in public life</h3><p>How rigorous evidence and open inquiry can improve debates about technological change.</p><div class="byline">Illustrative article</div></article>
+<article class="tile"><div class="kicker">Culture</div><h3>Why thoughtful cultural criticism matters</h3><p>The role of informed interpretation in literature, cinema and the arts.</p><div class="byline">Illustrative article</div></article>
+</div>
+<div class="about-teaser"><div><div class="kicker">From the Editors</div><h2>Beyond the headlines.</h2></div><div><p>The Murshidabad Review is being developed as an independent, research-driven journal for readers who value context, evidence and thoughtful interpretation over the speed of the news cycle.</p><p>Named after the historic city of Murshidabad in Bengal, the journal takes inspiration from a rich regional history while looking outward to the world.</p><button class="outline" data-page="About">About the Review</button></div></div>
+</div>
+<section id="section" class="section-page hidden" aria-live="polite"><div class="kicker">The Murshidabad Review</div><h1 id="section-name"></h1><p id="section-intro"></p><div class="section-items" id="section-items"></div></section>
+</main>
+<footer class="footer"><a data-page="Home" href="#home"><strong>The Murshidabad Review</strong></a><span>Independent thinking. Informed perspectives.<br>© <span id="year"></span> The Murshidabad Review</span></footer>
+</div>
+<script>
+const sections={
+"Global Affairs":["International relations, diplomacy, institutions and geopolitical change — with evidence and historical context.",["World Politics","The institutions that shape international cooperation"],["Diplomacy","Understanding global affairs beyond the news cycle"]],
+"History":["Historical research and interpretation, connecting Bengal and the wider world.",["Historical Perspectives","Murshidabad, Bengal and global trade"],["Intellectual History","The circulation of ideas across cultures"]],
+"Economy":["Research-led perspectives on trade, economic institutions and development.",["Political Economy","The evolution of global trade networks"],["Institutions","How economic systems take shape"]],
+"Science & Technology":["Critical inquiry into science, technological systems and their implications for society.",["Science & Society","Why evidence matters in public debate"],["Technology","New technologies and established institutions"]],
+"Culture":["Literature, cinema, art and cultural currents that influence public thought.",["Essays","Culture as a record of social change"],["Criticism","The value of rigorous interpretation"]],
+"Reviews":["Independent expert assessments of books, films and cultural work. Payment for a review service does not purchase a favourable opinion.",["Books","A home for informed, independent book criticism"],["Film","Cinema reviewed through expertise and critical judgement"]],
+"About":["An independent, research-driven journal of global affairs, history and ideas, named for the historic city of Murshidabad in Bengal.",["Our Purpose","To examine the forces shaping our world with care, evidence and historical perspective"],["Editorial Independence","Commercial arrangements do not determine editorial conclusions"]]
+};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function page(name,hash=true){const home=!sections[name];document.getElementById("home").classList.toggle("hidden",!home);document.getElementById("section").classList.toggle("hidden",home);
+document.querySelectorAll(".nav button").forEach(b=>{b.classList.toggle("active",b.dataset.page===(home?"Home":name));if(b.classList.contains("active"))b.setAttribute("aria-current","page");else b.removeAttribute("aria-current")});
+if(!home){const d=sections[name];document.getElementById("section-name").textContent=name;document.getElementById("section-intro").textContent=d[0];document.getElementById("section-items").innerHTML=d.slice(1).map(v=>'<article><div class="kicker">'+esc(v[0])+'</div><h2>'+esc(v[1])+'</h2><p>Preview content — editorially reviewed articles will appear here.</p><div class="byline">Editorial preview</div></article>').join("")}
+if(hash)history.replaceState(null,"","#"+(home?"home":encodeURIComponent(name.toLowerCase().replaceAll(" ","-"))));scrollTo(0,0)}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-page]");if(b){e.preventDefault();page(b.dataset.page)}});
+function sync(){const slug=decodeURIComponent(location.hash.slice(1)).replaceAll("-"," ").toLowerCase();page(Object.keys(sections).find(k=>k.toLowerCase()===slug)||"Home",false)}addEventListener("hashchange",sync);sync();
+document.getElementById("today").textContent=new Intl.DateTimeFormat("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"}).format(new Date());document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body></html>
